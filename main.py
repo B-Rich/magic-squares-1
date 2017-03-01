@@ -1,6 +1,7 @@
 import time
 import random
 import os, sys
+import copy
 
 t0 = time.time()
 f = open('dictionary.txt', 'r')
@@ -57,20 +58,33 @@ def search_word(N,**kwargs):
     r = random.randint()
     return 
 
-def satisy(lwords,inds):
+def satisfy(lwords,inds):
     
-    for ind in inds:
-        if 
+    for iword ,word in enumerate(lwords):
+        
+        if not( iword in inds): continue
+        
+        for iletter, letter in enumerate(word):
+ 
+            if not(iletter in ind): continue
+            if (letter != lwords[iletter][ iletter]):
+                return False
 
     return True
 
 good = ["WILL", "ICEY", "LEAN", "LYNX"]
-
-good = ["WILL", "ICEY", "LEAN", "LYNX"]
 print satisfy(good, range(4))
 
+good_kinda = ["WILL", "", "LEAN", "LYNX"]
+print satisfy(good_kinda, [0,2,3])
 
-    
+good_kinda2 = ["WILL", "JJJJ", "LEAN", "LYNX"]
+print satisfy(good_kinda, [0,2,3])
+
+print 'SAD!'
+good_kinda2 = ["WILL", "JJJJ", "LEAN", "LYNX"]
+print satisfy(good_kinda, [0,1,2,3])
+
     
 
 
