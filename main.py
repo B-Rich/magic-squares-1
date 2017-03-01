@@ -184,7 +184,7 @@ w3 = search_words(st,words4)
 print w3
 
 #Golden Rule, if you come to an empty set, before they're all filled in, 
-#go back, at least 1 step, possibly more
+#go back, at least 1 step, possibly more, possibly all the way
 
 def missing_places(current):
     return [ i for i,v in enumerate(current) if v ==""]
@@ -194,12 +194,70 @@ print missing_places(["WILL","IDEA","LEGS",""])
 print missing_places(["","IDEA","",""])
 
 
-
 def played_places(current):
-    return [ i for i,v in enumerate(current) if v !=""]
+    return [ i for i,v in enumerate(current) if v != ""]
 
-for step in range( 100000 ):
-    pass
+print 'playedplaces'
+print played_places(["WILL","IDEA","LEGS",""])
+print played_places(["","IDEA","",""])
+
+
+####General Algo
+print ' -----------------------------------------------'
+
+
+seed = "BRIANNA"
+
+ws = copy.copy(n_letter_words(len(seed), words))
+
+data0 = [seed if i == 0 else "" for i,v in enumerate(seed)]
+data = copy.copy(data0)
+
+winners = []
+MAGA = 4
+log, log2, log3, logW, logPOP = False, False, False, True, False
+
+for step in range( 10 ** MAGA ):
+    
+    mp = missing_places(data)
+    if len(mp) == 0:
+        winners.append(data)
+        if logW: print 'WINNER: ', str(data)
+        data = copy.copy(data0)   
+        continue
+    
+    fill_ind = random.sample(mp,1)[0]
+    st = search_term(fill_ind,data)
+    if log: print 'SEARCH pos', str(fill_ind), ' term: ', str(st)
+    fillers = search_words(st,ws)
+    
+    
+    if len(fillers) == 0:
+        if log: print 'DEAD: ', str(data)
+        pp = played_places(data)
+        pp.remove(0)   #keep seed
+        
+        pop_n = random.randint(1,max(1,len(pp)-1))
+        pop_ind = random.sample(pp,pop_n)
+        if logPOP: print 'POP: ', str(pop_ind)
+        
+        for ind in pop_ind:
+            data[ind] = ""
+        
+    else:
+        
+        n_fillers = len(fillers)
+        x = random.randint(0, n_fillers - 1)
+        data[fill_ind] = fillers[x]
+        if log: print 'avail: ', str(n_fillers)
+    
+    if log2: print str(step)
+    if log3: print data
+
+print 'HERE: +++++++++++++++'
+print winners
+    
+    
     
 
 
