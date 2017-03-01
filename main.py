@@ -205,8 +205,13 @@ print played_places(["","IDEA","",""])
 ####General Algo
 print ' -----------------------------------------------'
 
+#NOTE: add a feature wehre you input a completed one and iterate off that
+#NOTE: add a feature where seed can be anywhere
+#NOTE: down back out of a "best" so quickly untill youve exhuasted the possibilities
 
-seed = "BRIANNA"
+#seed = "BRIANNA"
+seed = "FRIES"
+seed = "TRUMP"
 
 ws = copy.copy(n_letter_words(len(seed), words))
 
@@ -214,7 +219,7 @@ data0 = [seed if i == 0 else "" for i,v in enumerate(seed)]
 data = copy.copy(data0)
 
 winners = []
-MAGA = 2
+MAGA = 3
 log, log2, log3, logW, logPOP = False, False, False, True, False
 logBest = True
 Best = len(seed)
@@ -310,6 +315,21 @@ H E Y : )
  K
 O'BRIEN
  N
+
+['TRUMP', 'REVUE', 'UVULA', 'MULCT', 'PEATS'], 
+['TRUMP', 'REVUE', 'UVULA', 'MULCT', 'PEATS']
+['TRUMP', 'REDIA', 'UDDER', 'MIENS', 'PARSE']
+['TRUMP', 'REVEL', 'UVULA', 'MELON', 'PLANE'
+['TRUMP', 'RANEE', 'UNBAR', 'MEALS', 'PERSE'], [
+['TRUMP', 'RAPER', 'UPDRY', 'MERDE', 'PRYER
+['TRUMP', 'RURAL', 'URINE', 'MANGO', 'PLEON'], 
+['TRUMP', 'RIMER', 'UMAMI', 'MEMES', 'PRISS'], 
+['TRUMP', 'RATIO', 'UTERI', 'MIRIN', 'POIND'], 
+['TRUMP', 'RUMOR', 'UMBRA', 'MORRO', 'PRAOS'], 
+['TRUMP', 'RADIO', 'UDONS', 'MINES', 'POSSE'], 
+['TRUMP', 'RURAL', 'URBIA', 'MAINS', 'PLASH'], 
+['TRUMP', 'RATER', 'UTILE', 'MELLS', 'PRESS'], 
+['TRUMP', 'RARES', 'UREDO', 'MEDIA', 'PSOAE']]
 
 
 
