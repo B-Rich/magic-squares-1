@@ -214,8 +214,10 @@ data0 = [seed if i == 0 else "" for i,v in enumerate(seed)]
 data = copy.copy(data0)
 
 winners = []
-MAGA = 4
+MAGA = 2
 log, log2, log3, logW, logPOP = False, False, False, True, False
+logBest = True
+Best = len(seed)
 
 for step in range( 10 ** MAGA ):
     
@@ -225,6 +227,11 @@ for step in range( 10 ** MAGA ):
         if logW: print 'WINNER: ', str(data)
         data = copy.copy(data0)   
         continue
+
+    if logBest:
+        if len(mp) <= Best:
+            print str(Best), ' ', str(data)
+            Best = len(mp)
     
     fill_ind = random.sample(mp,1)[0]
     st = search_term(fill_ind,data)
