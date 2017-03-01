@@ -86,7 +86,7 @@ good_kinda2 = ["WILL", "JJJJ", "LEAN", "LYNX"]
 print satisfy(good_kinda, [0,1,2,3])
 
     
-
+#Note: The seed, e.g. "WILL" could be any index, e.g the last word
 
 
 
