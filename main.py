@@ -208,30 +208,54 @@ print ' -----------------------------------------------'
 #NOTE: add a feature wehre you input a completed one and iterate off that
 #NOTE: add a feature where seed can be anywhere
 #NOTE: down back out of a "best" so quickly untill youve exhuasted the possibilities
+#NOTE: can combine words
+import sys
 
-#seed = "BRIANNA"
-seed = "FRIES"
-seed = "TRUMP"
 
-ws = copy.copy(n_letter_words(len(seed), words))
+seed = "JACOB"
+
+#data0 = ["TRUMP","","", "MIDAS",""]
+#data0 = ["TRUMP","","","MIDAS", "PROSS"]
+#data0, preserve = ["TRUMP","","","","PUTIN"], [0,4]
+
+preserve = []    # For a floating seed, set preserve to []
+current_seed = 0
 
 data0 = [seed if i == 0 else "" for i,v in enumerate(seed)]
+
+if len(sys.argv) > 1:
+    seed = str(sys.argv[1])
+
+MAGA = 2.5    
+if len(sys.argv) > 2:
+    MAGA = int(sys.argv[2])
+
+
+ws = copy.copy(n_letter_words(len(seed), words))
 data = copy.copy(data0)
-
 winners = []
-MAGA = 3
-log, log2, log3, logW, logPOP = False, False, False, True, False
-logBest = True
-Best = len(seed)
 
-for step in range( 10 ** MAGA ):
+
+log, log2, log3, logW, logPOP, logNewSeed = False, False, False, True, False, False
+logBest, logResetBest = True,True
+LEN = len(seed)
+Best = LEN
+
+for step in range( int(10 ** MAGA) ):
     
     mp = missing_places(data)
     if len(mp) == 0:
         winners.append(data)
-        if logW: print 'WINNER: ', str(data)
+        if logW: print 'WINNER: ', str(data), ' seed : ', str(current_seed)
         data = copy.copy(data0)   
         continue
+    
+    if data[current_seed] != seed:         #preserve is empty, therefore "floating seed"
+        
+        current_seed = random.randint(0, LEN - 1)
+        data[current_seed] = seed
+        if logResetBest: Best = LEN-1
+        if logNewSeed: print 'current_seed: ', str(current_seed), ' data: ', str(data)
 
     if logBest:
         if len(mp) <= Best:
@@ -247,14 +271,21 @@ for step in range( 10 ** MAGA ):
     if len(fillers) == 0:
         if log: print 'DEAD: ', str(data)
         pp = played_places(data)
-        pp.remove(0)   #keep seed
         
-        pop_n = random.randint(1,max(1,len(pp)-1))
-        pop_ind = random.sample(pp,pop_n)
-        if logPOP: print 'POP: ', str(pop_ind)
         
-        for ind in pop_ind:
-            data[ind] = ""
+        if len(preserve) > 0:
+            for pres in preserve:
+                pp.remove(pres)   #keep all seeds
+        
+        
+        if len(pp) > 0:           #in case heavily seeded failed to find 1 word on 1st try at particular ind
+            pop_n = random.randint(1,max(1,len(pp)-1))
+            pop_ind = random.sample(pp,pop_n)
+            if logPOP: print 'POP: ', str(pop_ind)
+        
+            for ind in pop_ind:
+                data[ind] = ""
+
         
     else:
         
@@ -267,9 +298,11 @@ for step in range( 10 ** MAGA ):
     if log3: print data
 
 print 'HERE: +++++++++++++++'
-print winners
+#out = [ str(str(w) + ' \n') for w in winners]
+#print out
     
-    
+for w in winners:
+    print w
     
 
 
@@ -315,22 +348,6 @@ H E Y : )
  K
 O'BRIEN
  N
-
-['TRUMP', 'REVUE', 'UVULA', 'MULCT', 'PEATS'], 
-['TRUMP', 'REVUE', 'UVULA', 'MULCT', 'PEATS']
-['TRUMP', 'REDIA', 'UDDER', 'MIENS', 'PARSE']
-['TRUMP', 'REVEL', 'UVULA', 'MELON', 'PLANE'
-['TRUMP', 'RANEE', 'UNBAR', 'MEALS', 'PERSE'], [
-['TRUMP', 'RAPER', 'UPDRY', 'MERDE', 'PRYER
-['TRUMP', 'RURAL', 'URINE', 'MANGO', 'PLEON'], 
-['TRUMP', 'RIMER', 'UMAMI', 'MEMES', 'PRISS'], 
-['TRUMP', 'RATIO', 'UTERI', 'MIRIN', 'POIND'], 
-['TRUMP', 'RUMOR', 'UMBRA', 'MORRO', 'PRAOS'], 
-['TRUMP', 'RADIO', 'UDONS', 'MINES', 'POSSE'], 
-['TRUMP', 'RURAL', 'URBIA', 'MAINS', 'PLASH'], 
-['TRUMP', 'RATER', 'UTILE', 'MELLS', 'PRESS'], 
-['TRUMP', 'RARES', 'UREDO', 'MEDIA', 'PSOAE']]
-
 
 
 """
