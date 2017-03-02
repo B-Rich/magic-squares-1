@@ -11,21 +11,116 @@
 ['TRUMP', 'RADIO', 'UDONS', 'MINES', 'POSSE'], 
 ['TRUMP', 'RATER', 'UTILE', 'MELLS', 'PRESS'], *
 
-['PENCE', 'EVERY', 'NEWER', 'CREPE', 'EYRES']
+['PENCE', 'EVERY', 'NEWER', 'CREPE', 'EYR   ES']
 ['PENCE', 'ELANS', 'NAZIS', 'CNIDA', 'ESSAY']  **
 
 ['REBECCA', 'EJECTOR', 'BEATING', '', '', 'CONCERN', 'ARGUING']
 
 WILL IDEA LEGS LAST
 
-['TRUMP', '', 'MIDAS', 'MEALS', 'PUSSY']
 ['TRUMP', '', 'MIDAS', 'MOATS', 'PUSSY']
 ['TRUMP', '', 'MIDAS', 'MOANS', 'PUSSY']
-['TRUMP', '', 'MIDAS', 'MOATS', 'POSSE']
-
 ['TRUMP', '', 'UREDO', 'MIDAS', 'PROSS']
 Pross verb (used without object), Scot. and North England. 1. to exhibit pride or haughtiness; put on airs. Origin of pross1 Expand.
 
+['HITLER', 'IHRAMS', 'TRUMP', 'LAMELY', 'EMPLOY']
+['HITLER', 'IHRAMS', 'TRUMP', 'LAMBIE', 'EMPIRE']
+['HITLER', 'IHRAMS', 'TRUMP', 'LAMIAS', 'EMPALE']
+ihrams - from the triconsonantal root Ḥ-R-M) is, in Islam, a sacred state which a Muslim must enter in order to perform the major pilgrimage (Hajj) or the minor pilgrimage (Umrah).
+lamia - a mythical monster, with the body of a woman or with the head and breasts of a woman and the body of a snake, said to prey on human beings and suck the blood of children.
 
-['MUTTS', 'USURP', 'TUQUE', 'TRUMP', 'SPEAK']
 
+['MUTTS', 'USURP', 'TUQUE', 'TRUMP', 'SPEAK']  tuque - a close fitting hat
+
+ ['TRUMP', '', 'UNFIT', '', 'PUTIN']
+
+['SLATESTAR', '', '', 'TIERCERON', 'ELUCIDATE', 'SHREDDERS', '', 'ALLOTROPE', 'REDNESSES']
+['SLATESTAR', 'LEARNABLE', '', 'TRIUMVIRI', '', 'SALVARSAN', '', 'ALARMABLE', 'RELIANCES']
+['UROSCOPIC', 'REFLOWING', '', '', 'COREDEEMS', 'SLATESTAR', 'PICKETING', 'INHUMANLY', '']
+['', 'ANTALKALI', 'ETCETERAS', '', 'ULTRAREDS', '', 'VARIEGATE', 'SLATESTAR', 'DISASTERS']
+
+
+ ['BOSTON', 'ONWARD', 'SWINGS', 'TANKAS', 'ORGASM', '']
+
+['SOROS', '', 'RIYAL', 'OBAMA', 'SOLAR']
+['SOROS', 'OBAMA', 'RAVES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RATEL', 'OMENS', 'SALSA']
+ ['SOROS', 'OBAMA', 'RAMET', 'OMEGA', 'SATAN'] 
+ ramet -  A physiologically distinct organism that is part of a group of genetically identical individuals derived from one progenitor, as a tree in a group of trees that have all sprouted from a single parent plan
+ 
+
+['OBAMA', 'BEGAN', 'AGIST', 'MASSA', 'ANTAS']
+['OBAMA', 'BEBOP', 'ABELE', 'MOLAR', 'APERS']
+['OBAMA', 'BURAN', 'ARUMS', 'MAMMA', 'ANSAE']
+['OBAMA', 'BOSON', 'ASKOI', 'MOOLS', 'ANISE']
+['OBAMA', 'BOTEL', 'ATOLL', 'MELEE', 'ALLEY']
+['OBAMA', 'BIGOS', 'AGIOS', 'MOOSE', 'ASSES']
+['OBAMA', 'BABAS', 'ABAYA', 'MAYAN', 'ASANA']
+['OBAMA', 'BEDIM', 'ADIEU', 'MIENS', 'AMUSE']
+['OBAMA', 'BUBAL', 'ABYSM', 'MASSE', 'ALMEH']
+['OBAMA', 'BREAD', 'AERIE', 'MAILE', 'ADEEM']
+['OBAMA', 'BLUER', 'AURAE', 'MEANT', 'ARETE']
+['OBAMA', 'BORAS', 'ARSIS', 'MAILE', 'ASSET']
+['OBAMA', 'BATIK', 'ATONE', 'MINKE', 'AKEES']
+['OBAMA', 'BANAL', 'ANGST', 'MASSE', 'ALTER']
+['OBAMA', 'BOLAS', 'ALEFS', 'MAFIA', 'ASSAY']
+['OBAMA', 'BASIS', 'ASSAY', 'MIAUL', 'ASYLA']
+['OBAMA', 'BELON', 'ALERT', 'MORAE', 'ANTES']
+['OBAMA', 'BIZES', 'AZONS', 'MENSA', 'ASSAI']
+['OBAMA', 'BASAL', 'ASANA', 'MANAT', 'ALATE']
+['OBAMA', 'BEMIX', 'AMICI', 'MICRO', 'AXIOM']
+
+
+['SOROS', 'OBAMA', 'RAVEL', 'OMERS', 'SALSA']
+['SOROS', 'OBAMA', 'RAGIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RATAL', 'OMASA', 'SALAL']
+['SOROS', 'OBAMA', 'RAMET', 'OMEGA', 'SATAY']
+['SOROS', 'OBAMA', 'RAKES', 'OMENS', 'SASSY']
+['SOROS', 'OBAMA', 'RACES', 'OMENS', 'SASSY']
+['SOROS', 'OBAMA', 'RADAR', 'OMASA', 'SARAN']
+['SOROS', 'OBAMA', 'RAVES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RATEL', 'OMENS', 'SALSA']
+['SOROS', 'OBAMA', 'RAKIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RABAT', 'OMASA', 'SATAY']
+['SOROS', 'OBAMA', 'RATAL', 'OMASA', 'SALAD']
+['SOROS', 'OBAMA', 'RAKER', 'OMEGA', 'SARAN']
+['SOROS', 'OBAMA', 'RAMAL', 'OMASA', 'SALAL']
+['SOROS', 'OBAMA', 'RAWER', 'OMEGA', 'SARAN']
+['SOROS', 'OBAMA', 'RAZES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RATES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RANIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RABAT', 'OMASA', 'SATAY']
+['SOROS', 'OBAMA', 'RACES', 'OMENS', 'SASSY']
+['SOROS', 'OBAMA', 'RAGIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RAZES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RAVES', 'OMENS', 'SASSY']
+['SOROS', 'OBAMA', 'RAVEL', 'OMERS', 'SALSA']
+['SOROS', 'OBAMA', 'RABAT', 'OMASA', 'SATAY']
+['SOROS', 'OBAMA', 'RATAL', 'OMASA', 'SALAL']
+['SOROS', 'OBAMA', 'RAKIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RAMAL', 'OMASA', 'SALAD']
+['SOROS', 'OBAMA', 'RAMET', 'OMEGA', 'SATAY']
+['SOROS', 'OBAMA', 'RATAL', 'OMASA', 'SALAL']
+['SOROS', 'OBAMA', 'RAGIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RAVEL', 'OMEGA', 'SALAL']
+['SOROS', 'OBAMA', 'RAMET', 'OMEGA', 'SATAY']
+['SOROS', 'OBAMA', 'RATAL', 'OMASA', 'SALAL']
+['SOROS', 'OBAMA', 'RAKIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RAGIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RAMET', 'OMEGA', 'SATAY']
+['SOROS', 'OBAMA', 'RAVES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RABAT', 'OMASA', 'SATAY']
+['SOROS', 'OBAMA', 'RANIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RAKIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RATES', 'OMENS', 'SASSY']
+['SOROS', 'OBAMA', 'RAVEL', 'OMERS', 'SALSA']
+['SOROS', 'OBAMA', 'RAVEL', 'OMERS', 'SALSA']
+['SOROS', 'OBAMA', 'RAGIS', 'OMITS', 'SASSY']
+['SOROS', 'OBAMA', 'RAVEL', 'OMEGA', 'SALAD']
+['SOROS', 'OBAMA', 'RAZES', 'OMENS', 'SASSY']
+['SOROS', 'OBAMA', 'RATES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RADAR', 'OMASA', 'SARAN']
+['SOROS', 'OBAMA', 'RAMAL', 'OMASA', 'SALAL']
+['SOROS', 'OBAMA', 'RARES', 'OMERS', 'SASSY']
+['SOROS', 'OBAMA', 'RATEL', 'OMENS', 'SALSA']
+['SOROS', 'OBAMA', 'RATER', 'OMEGA', 'SARAN']

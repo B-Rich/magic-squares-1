@@ -212,21 +212,29 @@ print ' -----------------------------------------------'
 import sys
 
 
-seed = "JACOB"
+seed = "SOROS"
 
 #data0 = ["TRUMP","","", "MIDAS",""]
 #data0 = ["TRUMP","","","MIDAS", "PROSS"]
-#data0, preserve = ["TRUMP","","","","PUTIN"], [0,4]
+data0, preserve = ["TRUMP","","","","PUTIN"], [0,4]
+data0, preserve = ["TRUMP","","UNFIT","",""], [0,2]
+data0, preserve = ["UNFIT","","","","TRUMP"], [0,4]
+data0, preserve = ["PUTIN","","TRUMP","",""], [0,2]
+data0, preserve = ["HITLER","","TRUMP","",""], [0,2]
 
-preserve = []    # For a floating seed, set preserve to []
+data0, preserve = ["SOROS","OBAMA","","",""], [0,1]
+data0, preserve = ["SOROS","OBAMA","RABBI","",""], [0,1,2]
+data0, preserve = ["SOROS","","","OBAMA",""], [0,3]
+data0, preserve = ["SOROS","OBAMA","","","SATAN"], [0,1,4]
+#preserve = [0]    # For a floating seed, set preserve to []
 current_seed = 0
 
-data0 = [seed if i == 0 else "" for i,v in enumerate(seed)]
+#data0 = [seed if i == 0 else "" for i,v in enumerate(seed)]
 
 if len(sys.argv) > 1:
     seed = str(sys.argv[1])
 
-MAGA = 2.5    
+MAGA = 3
 if len(sys.argv) > 2:
     MAGA = int(sys.argv[2])
 
