@@ -2,6 +2,8 @@ import time
 import random
 import os, sys
 import copy
+import math
+from convert_dict import BigWords
 
 def get_dictionary():
     t0 = time.time()
@@ -34,7 +36,7 @@ def get_dictionary():
 
     return words
 
-words = get_dictionary()
+words = BigWords.get_dictionary()
 
 
 def n_letter_words(n, input, **kwargs):
@@ -63,7 +65,6 @@ def demo_search_me(words):
 
 demo_search_me(words)
     
-
 
 
 print '------------'
@@ -212,21 +213,9 @@ print ' -----------------------------------------------'
 import sys
 
 
-seed = "SOROS"
-
-#data0 = ["TRUMP","","", "MIDAS",""]
-#data0 = ["TRUMP","","","MIDAS", "PROSS"]
-data0, preserve = ["TRUMP","","","","PUTIN"], [0,4]
-data0, preserve = ["TRUMP","","UNFIT","",""], [0,2]
-data0, preserve = ["UNFIT","","","","TRUMP"], [0,4]
-data0, preserve = ["PUTIN","","TRUMP","",""], [0,2]
-data0, preserve = ["HITLER","","TRUMP","",""], [0,2]
-
-data0, preserve = ["SOROS","OBAMA","","",""], [0,1]
-data0, preserve = ["SOROS","OBAMA","RABBI","",""], [0,1,2]
-data0, preserve = ["SOROS","","","OBAMA",""], [0,3]
-data0, preserve = ["SOROS","OBAMA","","","SATAN"], [0,1,4]
-#preserve = [0]    # For a floating seed, set preserve to []
+seed = "TRUMP"
+data0, preserve = ["TRUMP","","","","PROSS"], [0,4]
+#preserve = []    # For a floating seed, set preserve to []
 current_seed = 0
 
 #data0 = [seed if i == 0 else "" for i,v in enumerate(seed)]
@@ -234,7 +223,7 @@ current_seed = 0
 if len(sys.argv) > 1:
     seed = str(sys.argv[1])
 
-MAGA = 3
+MAGA = 3.5
 if len(sys.argv) > 2:
     MAGA = int(sys.argv[2])
 
@@ -243,9 +232,11 @@ ws = copy.copy(n_letter_words(len(seed), words))
 data = copy.copy(data0)
 winners = []
 
-
+tricky, tricky2, try_cntr = False,False, 0
+print 'tricky:' , str(tricky)
+print 'tricky2:', str(tricky2)
 log, log2, log3, logW, logPOP, logNewSeed = False, False, False, True, False, False
-logBest, logResetBest = True,True
+logBest, logResetBest,myBest = True,True, None
 LEN = len(seed)
 Best = LEN
 
@@ -258,17 +249,20 @@ for step in range( int(10 ** MAGA) ):
         data = copy.copy(data0)   
         continue
     
-    if data[current_seed] != seed:         #preserve is empty, therefore "floating seed"
+    #if data[current_seed] != seed:         #preserve is empty, therefore "floating seed"
         
-        current_seed = random.randint(0, LEN - 1)
-        data[current_seed] = seed
-        if logResetBest: Best = LEN-1
-        if logNewSeed: print 'current_seed: ', str(current_seed), ' data: ', str(data)
-
+        #were not checking if this is satified, so things start to decay
+        #only a full erase with a re-seed in a new position here
+     #   current_seed = random.randint(0, LEN - 1)
+     #   data[current_seed] = seed
+     #   if logResetBest: Best = LEN-1
+     #   if logNewSeed: print 'current_seed: ', str(current_seed), ' data: ', str(data)
+        
     if logBest:
         if len(mp) <= Best:
-            print str(Best), ' ', str(data)
             Best = len(mp)
+            print 'missing: ', str(Best), ' ', str(data)
+            myBest = copy.copy(data)
     
     fill_ind = random.sample(mp,1)[0]
     st = search_term(fill_ind,data)
@@ -283,17 +277,59 @@ for step in range( int(10 ** MAGA) ):
         
         if len(preserve) > 0:
             for pres in preserve:
-                pp.remove(pres)   #keep all seeds
+                
+				try:
+					pp.remove(pres)   #keep all seeds
+				except:
+					print 'pp:'
+					print pp
+					print pres
+					break
+        else:
+            pp.remove(current_seed)
+			print 'QQQQQQQQQQQQQQQQQQQQQQQQQ'
+			
+			
         
         
         if len(pp) > 0:           #in case heavily seeded failed to find 1 word on 1st try at particular ind
-            pop_n = random.randint(1,max(1,len(pp)-1))
+            
+            #pop_n = random.randint(1,max(1,len(pp)-1))
+            pop_n = random.randint(1,max(1,len(pp) - len(preserve)) )
+            
+            if tricky:
+                if  pp >= 5:
+                    temp = random.randint(1, int(math.exp(len(pp))) )
+                    X = len(pp)
+                    temp2 = math.log1p( max( 3, math.exp(len(pp)) - temp - try_cntr) )
+                    pop_n = int( temp2 )                
+                    if pop_n > (len(pp)-1): pop_n = (len(pp)-1)
+
+                    if pop_n <= 2:
+                        try_cntr += 1
+                    else:
+                        try_cntr = 0
+
+            if tricky2:
+                if  pp >= 5:
+                    if try_cntr > 200:
+                        try_cntr = 0
+                    else:
+                        pop_n = random.randint(1,2)
+                if pop_n > (len(pp)-1): pop_n = (len(pp)-1)
+
             pop_ind = random.sample(pp,pop_n)
             if logPOP: print 'POP: ', str(pop_ind)
         
             for ind in pop_ind:
                 data[ind] = ""
 
+            if max(1,len(pp) - len(preserve)) == pop_n:
+                if random.randint(1,2) == 2:
+                    data[current_seed] = ""
+
+            #if (pop_n == pp) and (len(preserve) == 0)
+                
         
     else:
         
@@ -308,11 +344,17 @@ for step in range( int(10 ** MAGA) ):
 print 'HERE: +++++++++++++++'
 #out = [ str(str(w) + ' \n') for w in winners]
 #print out
-    
+
 for w in winners:
     print w
-    
 
+if (len(winners) == 0) and (myBest is not None):    
+    print 'Best you got:'
+    print myBest
+
+#BRIANNA
+#NIAGARA
+#ITALIAN
 
 
 
